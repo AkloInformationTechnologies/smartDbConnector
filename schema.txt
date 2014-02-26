@@ -1,0 +1,68 @@
+
+
+SQL System Schema
+=================
+
+{
+	"_id":"LILITHA_TEST",
+	"dbType":"SQL",
+	"name":"LILITHA University Management System",
+	"config":{
+		"user":"sa",
+		"password":"123",
+		"server":"173.24.94.22",
+		"database":"vidlo_ums",
+		"options":{"instanceName":"sqlexpress"}
+	}
+}
+
+MYSQL System Schema
+===================
+
+{
+	"_id":"VIDLO_GURU",
+	"dbType":"MYSQL",
+	"name":"Make better teacher - student connection",
+	"config":{
+		"host":"localhost",
+		"user":"root",
+		"database":"test",
+		"password":null
+	}
+}
+
+SQL Report Schema (SP)
+======================
+
+{
+	"_id":"530c810ba49b7e9f2e1ecf8f",
+	"name":"scriptstudents",
+	"type":"SP",
+	"system":"LILITHA",
+	"sp":{
+		"name":"[dbo].[SP_RP_GetScriptStudents]",
+		"params":[
+			{"name":"ProgrammeID","dataType":"INT","direction":"INPUT"},
+			{"name":"OperationPlanID","dataType":"INT","direction":"INPUT"},
+			{"name":"RegNumber","dataType":"INT","direction":"INPUT"},
+			{"name":"CenterID","dataType":"INT","direction":"INPUT"}
+		]
+	}
+		
+}
+
+
+MYSQL Report Schema (QUERY)
+===========================
+
+{
+	"_id":"530dbfcba6ce44db22e83603",
+	"name":"teacherinfo",
+	"system":"VIDLO_GURU",
+	"type":"QUERY",
+	"query":{
+		"string":"select * from teacher"
+	}
+		
+}
+
