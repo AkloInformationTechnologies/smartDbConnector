@@ -1,5 +1,5 @@
-var server = require("./lib/server");
-var router = require("./lib/router");
+var server = require("./lib/view/server");
+var router = require("./lib/view/router");
 Global = {
 	systems : {},
 	smartReports : {}
