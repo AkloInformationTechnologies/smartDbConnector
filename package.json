@@ -1,0 +1,52 @@
+{
+  "company":{
+	"name": "AKLO Information Technologies Pvt Ltd",
+	"country": "Sri Lanka",
+	"website": "http://akloit.com/"
+  },
+  "contributors": [
+	{
+		"name": "Prasad Hewage",
+		"email": "prasad19sara@gmail.com",
+		"url": "https://github.com/prasadkodeincloud"
+	},
+	{
+		"name": "Gajanayake",
+		"email": ""
+	}
+  ],
+  "name": "smartDbConnector",
+  "description": "An easy-to-use RESTful api to connect multiple databases",
+  "keywords": [
+    "aklo",
+	"database",
+    "mssql",
+    "sql",
+    "sqlserver",
+    "connector",
+    "node-sqlserver",
+	"mysql",
+	"mongo",
+	"mongoskin"
+  ],
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AkloInformationTechnologies/smartDbConnector/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {
+    "mssql": ">=0.1.5",
+    "mysql": ">=2.1.0",
+	"node-mongoskin": ">=0.6.1"
+  },
+  "engines": {
+    "node": ">=0.6"
+  }
+}
