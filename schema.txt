@@ -42,10 +42,10 @@ SQL Report Schema (SP)
 	"sp":{
 		"name":"[dbo].[SP_RP_GetScriptStudents]",
 		"params":[
-			{"name":"ProgrammeID","dataType":"INT","direction":"INPUT"},
-			{"name":"OperationPlanID","dataType":"INT","direction":"INPUT"},
-			{"name":"RegNumber","dataType":"INT","direction":"INPUT"},
-			{"name":"CenterID","dataType":"INT","direction":"INPUT"}
+			{"name":"ProgrammeID","dataType":"INT","direction":"IN"},
+			{"name":"OperationPlanID","dataType":"INT","direction":"IN"},
+			{"name":"RegNumber","dataType":"INT","direction":"IN"},
+			{"name":"CenterID","dataType":"INT","direction":"IN"}
 		]
 	}
 		
