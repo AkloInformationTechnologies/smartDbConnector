@@ -25,14 +25,15 @@ MYSQL System Schema
 	"name":"Make better teacher - student connection",
 	"config":{
 		"host":"localhost",
+		"port":'3307' 
 		"user":"root",
-		"database":"test",
-		"password":null
+		"database":"tution",
+		"password":"userPassword"
 	}
 }
 
-SQL Report Schema (SP)
-======================
+SQL Report/Service Schema (SP)
+==============================
 
 {
 	"_id":"530c810ba49b7e9f2e1ecf8f",
@@ -52,8 +53,8 @@ SQL Report Schema (SP)
 }
 
 
-MYSQL Report Schema (QUERY)
-===========================
+MYSQL Report/Service Schema (QUERY)
+===================================
 
 {
 	"_id":"530dbfcba6ce44db22e83603",
@@ -62,6 +63,23 @@ MYSQL Report Schema (QUERY)
 	"type":"QUERY",
 	"query":{
 		"string":"select * from teacher"
+	}
+		
+}
+
+MYSQL Report/Service Schema (SP- Same as SQL)
+=============================================
+
+{
+	"_id":"530c810ba49b7e9f2e1ecf8f",
+	"name":"location",
+	"type":"SP",
+	"system":"VIDLO_GURU",
+	"sp":{
+		"name":"get_location",
+		"params":[
+			{"name":"LocationID","dataType":"INT","direction":"IN"}
+		]
 	}
 		
 }
