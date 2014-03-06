@@ -1,5 +1,6 @@
 
 module.exports = {
+	"mongoConfigDbPath":"localhost:27017/smartDbConnector?auto_reconnect",
 	"systems": {
 		"VIDLO_GURU": {
 				_id:"VIDLO_GURU",
