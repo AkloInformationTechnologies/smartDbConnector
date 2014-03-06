@@ -1,5 +1,9 @@
 
 module.exports = {
+	"nodeServer":{
+		host:"localhost",
+		port:8888
+	},
 	"mongoConfigDbPath":"localhost:27017/smartDbConnector?auto_reconnect",
 	"systems": {
 		"VIDLO_GURU": {
