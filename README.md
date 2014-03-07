@@ -71,22 +71,21 @@ A db called smartDbConnector will be used to map the services. A db will be auto
     
     You can change the key, _id and config section to match with your system.(Password encription functionality will be introduced in future.)
 
-    
     Note: In mysql phpmyadmin default password is null. No need to mention port.
     
 ###Start Server
 
 start the mongodb server and then start node server as follows.
-```bash
+```sh
     $ node index.js
     ```
 If you like to auto restart server while modifing the code you can use nodemon. If not installed yet, you can install nodemon globally as follows.
 
-```bash
+```sh
     $ npm install -g nodemon
     ```
  To run using nodemon.   
-```bash
+```sh
     $ nodemon index.js
     ```
    
@@ -176,14 +175,14 @@ Asuming the node server is started in localhost:8888,
 
 To run the server continuosly (to auto restart when down) you can use forever module. To install,
 
-```bash
+```sh
     $ npm install -g forever
     $ forever node index.js
     ```
     
 Importent : Latest version of forever got issues when run in windows. If you are a windows user, install the following older version and run with -C.
 
-```bash
+```sh
     npm install -g forever@0.10.0
     forever node -C index.js
     ```
