@@ -38,7 +38,7 @@ A db called smartDbConnector will be used to map the services. A db will be auto
     
     You can add any number of systems as follows. First system "VIDLO_GURU" shows a system integrated with mysql database and second one shows sql server integration. 
  ```js
-  systems": {
+  "systems": {
     	"VIDLO_GURU": {
 				_id:"VIDLO_GURU",
 				name: "Make better teacher - student connection" ,
