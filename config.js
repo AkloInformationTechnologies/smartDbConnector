@@ -15,19 +15,19 @@ module.exports = {
 					user: 'root',
 					port:'3307',
 					database: 'tution',
-					password : "*19vidloguru*"
+					password : "password123"
 				}
-			},
+		},
 			
 		"MDIS":{
 				_id:"MDIS",
 				name: "University management system",
 				dbType:"SQL",
 				config:{
-					server: '172.21.25.90',
+					server: '173.21.23.95',
 					user: 'sa',
-					password : '1qaz2wsx@',
-					database: 'MDIS_Development_Live',
+					password : 'password123',
+					database: 'MDIS_Development',
 					options:{
 						instanceName:"sql2008r2"
 					}	
