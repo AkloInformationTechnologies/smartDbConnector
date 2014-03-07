@@ -125,7 +125,7 @@ Asuming the node server is started in localhost:8888,
   To inspect the parameters of a sp.Will list down all the parameters in a array.
   
    ```js
-   localhost:8888//[system Key]/spspec/[sp name]
+   localhost:8888/[system Key]/spspec/[sp name]
    ex: localhost:8888/mdis/spspec/CM_SP_GetStudentDetailsByApplicationID
    output:
    [{"name":"ApplicationID","dataType":"INT","direction":"IN","maxlength":null}]
@@ -175,17 +175,15 @@ Asuming the node server is started in localhost:8888,
 
 To run the server continuosly (to auto restart when down) you can use forever module. To install,
 
-```sh
     $ npm install -g forever
     $ forever node index.js
-    ```
+    
     
 Importent : Latest version of forever got issues when run in windows. If you are a windows user, install the following older version and run with -C.
 
-```sh
     npm install -g forever@0.10.0
     forever node -C index.js
-    ```
+    
 ---
 ## Contribution
 ---
