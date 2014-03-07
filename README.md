@@ -90,3 +90,113 @@ If you like to auto restart server while modifing the code you can use nodemon. 
     
    
 ---
+##Guideline
+---
+Asuming the node server is started in localhost:8888,
+
+- systems
+
+  To view the systems configurations
+  
+   ```js
+   localhost:8888/systems
+    ```
+- services
+
+  To view the already exposed services in a system
+  
+   ```js
+   localhost:8888/[system Key]/services
+   ex: localhost:8888/mdis/services
+    ```
+- sps
+
+  To search the sps in the database of a system
+  
+   ```js
+   localhost:8888/[system Key]/sps/[phrase of sp name]
+   ex: localhost:8888/mdis/sps/studentdetails
+   this will list down all the sps in the db, contains name is like 'studentdetails'
+   output: 
+   [{"schema":"dbo","name":"CM_SP_GetStudentDetailsByApplicationID"},{"schema":"dbo","name":"MC_RV_GetAllStudentDetails"}]
+    ```
+- spspec
+
+  To inspect the parameters of a sp.Will list down all the parameters in a array.
+  
+   ```js
+   localhost:8888//[system Key]/spspec/[sp name]
+   ex: localhost:8888/mdis/spspec/CM_SP_GetStudentDetailsByApplicationID
+   output:
+   [{"name":"ApplicationID","dataType":"INT","direction":"IN","maxlength":null}]
+    ```
+- newservice
+
+  To expose the sp as a service
+  
+   ```js
+   localhost:8888/[system Key]/newservice/[service name]/[sp name]
+   ex:localhost:8888/mdis/newservice/studentDetails/CM_SP_GetStudentDetailsByApplicationID
+   output: 
+   {"Result":"successfully added a new service as studentdetails"}
+    ```
+    
+    
+    Note: Now If you check the available services of system, you will be abale to see a new service is added with the name provided.
+    ex: http://localhost:8888/mdis/services
+    output:
+    [{"name":"studentdetails"}]
+    
+- Inspect service
+ 
+ To inspect the input parameters of a service
+  
+   ```js
+   localhost:8888/[system Key]/[service name]/params
+   ex: localhost:8888/mdis/studentdetails/params
+   output: 
+   [{"name":"ApplicationID","dataType":"INT","direction":"IN","maxlength":null}]
+    ```
+    To get the result from the service , parameters shoud be passed in the given order.
+    
+- Run service
+ 
+ To run the service
+  
+   ```js
+   localhost:8888/[system Key]/[service name]/["/" seperated params]
+   ex: localhost:8888/mdis/studentdetails/100
+   output: 
+   details of the student with id 100 as a json result.
+    ```
+ 
+---    
+##Tips
+
+To run the server continuosly (to auto restart when down) you can use forever module. To install,
+
+```sh
+    $ npm install -g forever
+    $ forever node index.js
+    ```
+    
+Importent : Latest version of forever got issues when run in windows. If you are a windows user, install the following older version and run with -C.
+
+```sh
+    npm install -g forever@0.10.0
+    forever node -C index.js
+    ```
+---
+## Contribution
+---
+
+This project is still in alpha state and require lot of enhancements and modifications in security,caching, architecture and configuration with other databases. Need to test with mocha as well.
+
+If anyone like to contribute you are warmly welcome. 
+
+
+
+    
+    
+
+
