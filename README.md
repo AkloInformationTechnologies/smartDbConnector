@@ -16,7 +16,7 @@ This version support for mysql and sql server. A Mongodb collection is used to m
 ---
 ###Configuration
 
-All the configurations required to run the project are mentioned in the config.js file. You can change the parameters to as need.
+All the configurations required to run the project are mentioned in the config.js file. You can change the parameters as you need.
 
 - Set the nodejs server and port
  
